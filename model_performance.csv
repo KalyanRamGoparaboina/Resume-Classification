@@ -1,0 +1,5 @@
+Model,Accuracy,Precision,Recall,F1 Score
+Random Forest,1.0,1.0,1.0,1.0
+SVM,1.0,1.0,1.0,1.0
+Logistic Regression,1.0,1.0,1.0,1.0
+XGBoost,0.8181818181818182,0.7454545454545454,0.8181818181818182,0.7777777777777778

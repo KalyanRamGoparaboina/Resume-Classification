@@ -1,0 +1,7 @@
+Model Comparison Results:
+Random Forest: 1.0000
+SVM: 1.0000
+Logistic Regression: 1.0000
+XGBoost: 0.8182
+
+Selected Best Model: Random Forest
