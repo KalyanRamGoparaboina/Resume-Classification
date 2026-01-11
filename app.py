@@ -73,7 +73,7 @@ def main():
             with col1:
                 st.subheader("Category Distribution")
                 fig, ax = plt.subplots(figsize=(8, 5))
-                sns.countplot(data=df, x='category', palette='viridis', ax=ax)
+                sns.countplot(data=df, x='category', hue='category', palette='viridis', legend=False, ax=ax)
                 plt.xticks(rotation=45)
                 st.pyplot(fig)
                 
@@ -91,7 +91,7 @@ def main():
             word_df = pd.DataFrame(common_words, columns=['Keyword', 'Count'])
             
             fig, ax = plt.subplots(figsize=(12, 5))
-            sns.barplot(data=word_df, x='Keyword', y='Count', palette='magma', ax=ax)
+            sns.barplot(data=word_df, x='Keyword', y='Count', hue='Keyword', palette='magma', legend=False, ax=ax)
             plt.xticks(rotation=45)
             st.pyplot(fig)
         else:
@@ -112,7 +112,7 @@ def main():
             
             st.subheader(f"Model Comparison: {metric}")
             fig, ax = plt.subplots(figsize=(10, 6))
-            sns.barplot(data=perf_df, x='Model', y=metric, palette='coolwarm', ax=ax)
+            sns.barplot(data=perf_df, x='Model', y=metric, hue='Model', palette='coolwarm', legend=False, ax=ax)
             plt.ylim(0, 1.1)
             for p in ax.patches:
                 ax.annotate(format(p.get_height(), '.2f'), 
